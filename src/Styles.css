@@ -16,14 +16,26 @@
 
 .Header {
   height: 99px;
-  background-color: #650121;
+  background-color: #650121;  
 }
 
 .HeaderLogoImage {
   object-fit: contain;
   height: 75px;
   padding: 10px 0px 0px 10px;
-  justify-self: center;
+}
+
+.SocialIcon {
+  object-fit: contain;
+  height: 60px;
+  width: 60px;
+  padding: 20px 10px 20px 10px;
+  color: white;
+  line-height: 98px;
+}
+
+.SocialContainer {
+  min-height: 98px;
 }
 
 .AppLogo {
@@ -68,7 +80,7 @@
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
-  color: white;
+  color: black;
   background-color: #53001a;
 }
 
@@ -149,4 +161,12 @@
 .PortfolioSegmentBShort {
   min-height: 10vh;
   background-color: #222629;
+}
+
+.CopyRight {
+  color: white;
+  min-height: 98px;
+  line-height: 98px;
+  font-family: Verdana;
+  font-weight: bolder;
 }

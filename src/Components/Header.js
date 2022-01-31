@@ -6,7 +6,7 @@ import '../Styles.css';
 
 const Header = () => {
     return (
-        <div className='Header Flex Row'>
+        <div className='Header Nav'>
             <img
                 src={logo}
                 alt='logo'

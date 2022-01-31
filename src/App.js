@@ -1,7 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-import Home from "./Screens/Home";
-
 import logo from './Assets/Images/Logo/Whale_NAWDEV_Right.png'
 
 import './Styles.css';
@@ -36,19 +34,19 @@ export default function App() {
 
           <NavLink
             className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/About"
+            to="/Portfolio"
           >
             <div className="Linked">
-              About
+              Portfolio
             </div>
           </NavLink>
 
           <NavLink
             className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/Portfolio"
+            to="/About"
           >
             <div className="Linked">
-              Portfolio
+              About
             </div>
           </NavLink>
 
