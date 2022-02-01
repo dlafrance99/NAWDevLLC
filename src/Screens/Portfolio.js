@@ -2,14 +2,18 @@ import React from 'react';
 
 import SubSection from '../Components/SubSection';
 import Footer from '../Components/Footer';
+import WhaleBackground from '../Components/WhaleBackground';
 
 import NAWPutter from '../Assets/Images/GameLogos/NAWPutterIcon_FullRes.png'
 import Randominator from '../Assets/Images/GameLogos/Randominator_Icon.png'
 import Xmas from '../Assets/Images/GameLogos/XmasCountdown_Icon.png'
 
 const Portfolio = () => {
+
+
     return (
         <>
+            <WhaleBackground />
             <div className='PortfolioSegmentAShort'>
                 <div className='BodyMainHeader'>
                     This is some stuff we've done
