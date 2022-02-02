@@ -7,6 +7,7 @@ import WhaleBackground from '../Components/WhaleBackground';
 import NAWPutter from '../Assets/Images/GameLogos/NAWPutterIcon_FullRes.png'
 import Randominator from '../Assets/Images/GameLogos/Randominator_Icon.png'
 import Xmas from '../Assets/Images/GameLogos/XmasCountdown_Icon.png'
+import DiscGolfGames from '../Assets/Images/GameLogos/DiscGolfGamesIcon.png'
 
 const Portfolio = () => {
 
@@ -24,7 +25,7 @@ const Portfolio = () => {
                 Logo={NAWPutter}
                 LogoAlt='NAW Putter Logo'
                 Title='NAW Putter'
-                Content='Stuff'
+                Content={`Stuff`}
                 Style='A'
                 Orientation='Right'
             />
@@ -33,7 +34,7 @@ const Portfolio = () => {
                 Logo={Randominator}
                 LogoAlt='Randominator Logo'
                 Title='Randominator'
-                Content='Stuff'
+                Content={`Stuff`}
                 Style='B'
                 Orientation='Left'
             />
@@ -42,7 +43,7 @@ const Portfolio = () => {
                 Logo={Xmas}
                 LogoAlt='Xmas Countdown! Logo'
                 Title='Xmas Countdown!'
-                Content='Stuff'
+                Content={`Stuff`}
                 Style='A'
                 Orientation='Right'
             />
@@ -54,10 +55,10 @@ const Portfolio = () => {
             </div>
 
             <SubSection
-                Logo={null}
+                Logo={DiscGolfGames}
                 LogoAlt='Disc Golf Games Logo'
                 Title='Disc Golf Games'
-                Content='Stuff'
+                Content={`Stuff`}
                 Style='A'
                 Orientation='Left'
             />
@@ -67,7 +68,7 @@ const Portfolio = () => {
                 Logo={null}
                 LogoAlt='Rapid Reader Logo'
                 Title='Rapid Reader'
-                Content='Stuff'
+                Content={`Stuff`}
                 Style='B'
                 Orientation='Right'
             />

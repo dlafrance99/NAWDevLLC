@@ -30,7 +30,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Style, Orientation }) => {
                             </>
                             :
                             <>
-                                <div className='BodyHeader'>
+                                <div className='BodySubHeader'>
                                     {Content}
                                 </div>
 
@@ -38,7 +38,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Style, Orientation }) => {
                                     {Title}
                                 </div>
 
-                                <div className='BodySubHeader'>
+                                <div className='BodyHeader'>
                                     <img
                                         src={Logo}
                                         alt={LogoAlt}
