@@ -8,6 +8,7 @@ import NAWPutter from '../Assets/Images/GameLogos/NAWPutterIcon_FullRes.png'
 import Randominator from '../Assets/Images/GameLogos/Randominator_Icon.png'
 import Xmas from '../Assets/Images/GameLogos/XmasCountdown_Icon.png'
 import DiscGolfGames from '../Assets/Images/GameLogos/DiscGolfGamesIcon.png'
+import RapidReader from '../Assets/Images/GameLogos/RapidReaderIcon.png'
 
 const Portfolio = () => {
 
@@ -65,7 +66,7 @@ const Portfolio = () => {
 
 
             <SubSection
-                Logo={null}
+                Logo={RapidReader}
                 LogoAlt='Rapid Reader Logo'
                 Title='Rapid Reader'
                 Content={`Stuff`}

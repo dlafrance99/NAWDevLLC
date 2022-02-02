@@ -12,7 +12,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Style, Orientation }) => {
                         Orientation === 'Left'
                             ?
                             <>
-                                <div className='BodyHeader'>
+                                <div className='BodySubHeader'>
                                     <img
                                         src={Logo}
                                         alt={LogoAlt}
@@ -38,7 +38,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Style, Orientation }) => {
                                     {Title}
                                 </div>
 
-                                <div className='BodyHeader'>
+                                <div className='BodySubHeader'>
                                     <img
                                         src={Logo}
                                         alt={LogoAlt}
