@@ -3,7 +3,7 @@ import React from 'react';
 
 
 import logo from '../Assets/Images/Logo/Whale_NAWDEV_Right.png'
-import { FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaPatreon } from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -15,24 +15,32 @@ const Footer = () => {
                     className='HeaderLogoImage'
                 />
 
-                <div className='SocialContainer'>
-                    <a target='_blank' rel="noopener noreferrer" href='https://www.facebook.com/' >
-                        <FaFacebook
-                            className='SocialIcon'
-                        />
-                    </a>
+                <div className='SocialContainer Nav'>
+                    <div className='FooterIcon'>
+                        <a target='_blank' rel="noopener noreferrer" href='https://www.patreon.com/'  >
+                            <FaPatreon
+                                className='SocialIcon'
+                                size="10"
+                            />
+                        </a>
+                    </div>
 
-                    <a target='_blank' rel="noopener noreferrer" href='https://www.instagram.com' >
-                        <FaInstagram
-                            className='SocialIcon'
-                        />
-                    </a>
 
-                    <a target='_blank' rel="noopener noreferrer" href='https://www.github.com' >
-                        <FaGithub
-                            className='SocialIcon'
-                        />
-                    </a>
+                    <div className='FooterIcon'>
+                        <a target='_blank' rel="noopener noreferrer" href='https://www.instagram.com/nawdevelopment/' >
+                            <FaInstagram
+                                className='SocialIcon'
+                            />
+                        </a>
+                    </div>
+
+                    <div className='FooterIcon'>
+                        <a target='_blank' rel="noopener noreferrer" href='https://www.github.com' >
+                            <FaGithub
+                                className='SocialIcon'
+                            />
+                        </a>
+                    </div>
                 </div>
 
                 <div className='CopyRight'>

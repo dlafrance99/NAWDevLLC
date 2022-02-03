@@ -27,11 +27,24 @@
 
 .SocialIcon {
   object-fit: contain;
-  height: 60px;
-  width: 60px;
-  padding: 20px 10px 0px 10px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
   color: white;
-  line-height: 98px;
+  
+}
+
+.FooterIcon{
+  background-color: black;
+  border-radius: 90px;
+  margin: 2px;
+  height: 80px;
+  width: 80px;
+  
+}
+
+.FooterLink{
+  height: 0;
 }
 
 .SocialContainer {
@@ -40,9 +53,11 @@
 
 .AppLogo {
   object-fit: contain;
-  height: 30vh;
+  width: 33vw;
+  max-height: 30vh;
   justify-self: center;
   align-self: center;
+  border-radius: 1em;
   flex: 1;
 }
 
@@ -139,11 +154,11 @@
 }
 
 .centerText {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .PortfolioSegmentA {
-  min-height: 80vh;
+  min-height: 70vh;
   background-color: #222629;
 }
 
@@ -153,7 +168,7 @@
 }
 
 .PortfolioSegmentB {
-  min-height: 80vh;
+  min-height: 70vh;
   background-color: #101113;
 }
 
@@ -170,3 +185,13 @@
   font-weight: bolder;
 }
 
+.marginLeft {
+  margin-left: 50px;
+}
+
+.marginRight {
+  margin-right: 50px;
+}
+.marginTop {
+  margin-top: 10px;
+}
