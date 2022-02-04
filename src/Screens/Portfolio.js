@@ -30,6 +30,7 @@ const Portfolio = () => {
                 Content={`This mobile app is near and dear to our heart, since it was our first published app! NAW Putter is a disc golf putting stat tracking app. This app enables you to track your practice sessions and learn to putt better. It also comes packed with different putting games so you never get bored!`}
                 Style='A'
                 Orientation='Right'
+                Destination={`https://apps.apple.com/us/app/naw-putter/id1513636570`}
             />
 
             <SubSection
@@ -39,6 +40,7 @@ const Portfolio = () => {
                 Content={`This simple mobile apps lets you make lists of items and randomly select one. Complete with an elimination mode that allows you to get rid of items until you've gone through the whole list.`}
                 Style='B'
                 Orientation='Left'
+                Destination={`https://apps.apple.com/us/app/randominator/id1533176755`}
             />
 
             <SubSection
@@ -48,6 +50,7 @@ const Portfolio = () => {
                 Content={`I mean the name kind of says it all. Is today Christmas? Probably not, why would you be looking at our website on Christmas? Anyways, this app will let you know how many months, weeks, days, hours, minutes, and seconds there are until it's Christmas again`}
                 Style='A'
                 Orientation='Right'
+                Destination={`https://apps.apple.com/us/app/xmas-countdown/id1531199155`}
             />
 
             <div className='PortfolioSegmentAShort'>
@@ -64,7 +67,6 @@ const Portfolio = () => {
                 Style='A'
                 Orientation='Left'
             />
-
 
             <SubSection
                 Logo={RapidReader}

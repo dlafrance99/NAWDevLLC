@@ -9,15 +9,14 @@ const Footer = () => {
     return (
         <>
             <div className='Header Nav'>
-                <img
-                    src={logo}
-                    alt='NAW Development logo'
-                    className='HeaderLogoImage'
-                />
+                <div className='CopyRight'>
+                    &copy; 2020-2022 NAW Development LLC
+                </div>
+
 
                 <div className='SocialContainer Nav'>
                     <div className='FooterIcon'>
-                        <a target='_blank' rel="noopener noreferrer" href='https://www.patreon.com/'  >
+                        <a target='_blank' className='noMargin' rel="noopener noreferrer" href='https://www.patreon.com/'  >
                             <FaPatreon
                                 className='SocialIcon'
                                 size="10"
@@ -27,7 +26,7 @@ const Footer = () => {
 
 
                     <div className='FooterIcon'>
-                        <a target='_blank' rel="noopener noreferrer" href='https://www.instagram.com/nawdevelopment/' >
+                        <a target='_blank' className='noMargin' rel="noopener noreferrer" href='https://www.instagram.com/nawdevelopment/' >
                             <FaInstagram
                                 className='SocialIcon'
                             />
@@ -35,7 +34,7 @@ const Footer = () => {
                     </div>
 
                     <div className='FooterIcon'>
-                        <a target='_blank' rel="noopener noreferrer" href='https://www.github.com' >
+                        <a target='_blank' className='noMargin' rel="noopener noreferrer" href='https://www.github.com' >
                             <FaGithub
                                 className='SocialIcon'
                             />
@@ -43,9 +42,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='CopyRight'>
-                    &copy; 2020-2022 NAW Development LLC
-                </div>
+                <img
+                    src={logo}
+                    alt='NAW Development logo'
+                    className='HeaderLogoImage'
+                />
             </div>
         </>
     )

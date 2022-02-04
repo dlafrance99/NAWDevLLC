@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientation }) => {
+const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientation, Destination }) => {
 
     const showSubSection = () => {
         if (Logo === null) {
@@ -56,17 +56,17 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
                                 Orientation === 'Left'
                                     ?
                                     <>
-                                        <div className='BodySubHeader'>
+                                        <a href={Destination} target="_blank" rel='noreferrer' className='BodySubHeader'>
                                             <img
                                                 src={Logo}
                                                 alt={LogoAlt}
                                                 className='AppLogo'
                                             />
-                                        </div>
+                                        </a>
 
-                                        <div className='BodyHeader'>
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
                                             {Title}
-                                        </div>
+                                        </a>
 
                                         <div className='BodySubHeader'>
                                             {Content}
@@ -78,17 +78,17 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
                                             {Content}
                                         </div>
 
-                                        <div className='BodyHeader'>
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
                                             {Title}
-                                        </div>
+                                        </a>
 
-                                        <div className='BodySubHeader'>
+                                        <a href={Destination} target="_blank" rel='noreferrer' className='BodySubHeader'>
                                             <img
                                                 src={Logo}
                                                 alt={LogoAlt}
                                                 className='AppLogo'
                                             />
-                                        </div>
+                                        </a>
                                     </>
                             }
 
