@@ -1,13 +1,16 @@
 import React from 'react';
 import Whale from '../Assets/Images/Logo/NAW_Productions.png'
 
-const WhaleBackground = () => {
+const WhaleBackground = ({DaHeight}) => {
 
     const showTotalWhales = () => {
         let WhaleTotal = [];
         let ScreenHeight = document.body.scrollHeight - 200;
         let WhaleHeight = 250;
         let topPush = 100
+
+        console.log({DaHeight})
+        console.log({ScreenHeight})
 
         while (ScreenHeight - WhaleHeight > 0) {
             WhaleTotal.push(

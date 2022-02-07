@@ -2,10 +2,15 @@
   background-color: #222629;
   min-width: 100vw;
   min-height: 100vh;
+  background-image: url('./Assets/Images/Logo/NAW_Productions_10PercentOpacity.png'), url('./Assets/Images/Logo/NAW_Productions_10PercentOpacity_Flip.png') ;
+  background-repeat: repeat;
+  background-size: 250px;
 }
 
 .Content {
-  min-height: 100vh;
+  min-height: 85vh;
+  background-color: #222629;
+  display: flex;
 }
 
 .Nav {
@@ -31,17 +36,19 @@
   width: 50px;
   padding: 20px;
   color: white;
-  
 }
 
-.FooterIcon{
+.SocialIcon:hover {
+  color: black;
+}
+
+.FooterIcon {
   margin: 2px;
   height: 80px;
   width: 80px;
-  
 }
 
-.FooterLink{
+.FooterLink {
   height: 0;
 }
 
@@ -147,7 +154,7 @@
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   flex: 1;
 }
 
@@ -192,4 +199,25 @@
 }
 .marginTop {
   margin-top: 10px;
+}
+
+.ContactContent {
+  margin: auto;
+  border: 2px black solid;
+  padding: 10px 50px;
+  border-radius: 1rem;
+  background-color: black;
+}
+
+.EmailStyle {
+  color: #650121;
+  font-family: Verdana;
+  font-weight: bolder;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+.EmailStyle:hover {
+  color: #53001a;
 }

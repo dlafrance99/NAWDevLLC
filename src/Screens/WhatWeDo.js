@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Footer from '../Components/Footer';
+
 const WhatWeDo = () => {
     return (
         <>
@@ -10,6 +12,8 @@ const WhatWeDo = () => {
             <div className='BodySubHeader'>
                 That's What We Do! Heck we made this website right here! From inception, planning, Developing, and launch NAW Development can do it all!
             </div>
+
+            <Footer />
         </>
     )
 }
