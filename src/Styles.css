@@ -2,9 +2,7 @@
   background-color: #222629;
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url('./Assets/Images/Logo/NAW_Productions_10PercentOpacity.png'), url('./Assets/Images/Logo/NAW_Productions_10PercentOpacity_Flip.png') ;
-  background-repeat: repeat;
-  background-size: 250px;
+  
 }
 
 .Content {
