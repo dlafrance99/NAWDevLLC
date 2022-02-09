@@ -56,8 +56,17 @@
 
 .AppLogo {
   object-fit: contain;
-  width: 33vw;
   max-height: 30vh;
+  justify-self: center;
+  align-self: center;
+  border-radius: 1em;
+  flex: 1;
+}
+
+.AppLogoThumbnail {
+  object-fit: contain;
+  max-height: 30vw;
+  max-width: 25vw;
   justify-self: center;
   align-self: center;
   border-radius: 1em;
@@ -139,6 +148,7 @@
   font-weight: bolder;
   text-decoration: none;
   flex: 1;
+  margin: 0 15px 0 15px
 }
 
 .BodySubHeader {
@@ -162,22 +172,22 @@
 
 .PortfolioSegmentA {
   min-height: 70vh;
-  background-color: #222629;
+  background-color: #222629CC;
 }
 
 .PortfolioSegmentAShort {
   min-height: 10vh;
-  background-color: #101113;
+  background-color: #101113CC;
 }
 
 .PortfolioSegmentB {
   min-height: 70vh;
-  background-color: #101113;
+  background-color: #101113CC;
 }
 
 .PortfolioSegmentBShort {
   min-height: 10vh;
-  background-color: #222629;
+  background-color: #222629CC;
 }
 
 .CopyRight {
