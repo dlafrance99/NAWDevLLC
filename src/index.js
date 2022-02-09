@@ -5,7 +5,6 @@ import App from "./App";
 
 import About from "./Screens/About";
 import Contact from "./Screens/Contact";
-import Home from "./Screens/Home";
 import Portfolio from "./Screens/Portfolio";
 import WhatWeDo from "./Screens/WhatWeDo";
 import AppScreen from "./Screens/AppScreen";
@@ -14,12 +13,11 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/"  element={<App />}>
-        <Route path="NAWNAW" element={<Home />} />
+      <Route path="/" element={<App />}>
+        <Route path="" element={<WhatWeDo />} />
+        <Route path="Portfolio" element={<Portfolio />} />
         <Route path="About" element={<About />} />
         <Route path="Contact" element={<Contact />} />
-        <Route path="Portfolio" element={<Portfolio />} />
-        <Route path="WhatWeDo" element={<WhatWeDo />} />
         <Route path="AppScreen/:AppTitle" element={<AppScreen />} />
         <Route path="*" element={
           <main style={{padding: "1rem"}}>

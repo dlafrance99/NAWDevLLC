@@ -28,7 +28,7 @@ export default function App() {
         >
           <NavLink
             className={("HeaderLink")}
-            to="/NAWNAW"
+            to="/"
           >
 
             <img
@@ -40,7 +40,7 @@ export default function App() {
 
           <NavLink
             className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/WhatWeDo"
+            to="/"
           >
             <div className="Linked">
               WhatWeDo
