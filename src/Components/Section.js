@@ -12,10 +12,10 @@ const Section = ({ AppLogo1, AppLogoAlt1, AppLogo2, AppLogoAlt2, AppLogo3, AppLo
     }
 
     const RandomWhale = () => {
-        let Rando = Math.floor(Math.random()*2)
-        if(Rando === 1){
+        let Rando = Math.floor(Math.random() * 2)
+        if (Rando === 1) {
             return WhaleBG
-        }else {
+        } else {
             return WhaleFlipBG
         }
     }

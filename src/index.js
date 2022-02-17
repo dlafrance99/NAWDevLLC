@@ -20,8 +20,10 @@ render(
         <Route path="Contact" element={<Contact />} />
         <Route path="AppScreen/:AppTitle" element={<AppScreen />} />
         <Route path="*" element={
-          <main style={{padding: "1rem"}}>
-            <p>There's Nothing here, check the URL and try again</p>
+          <main style={{ padding: "1rem", height: '75vh' }}>
+            <p style={{ color: 'white' }}>
+              There's nothing here, check the URL and try again
+            </p>
           </main>
         } />
       </Route>

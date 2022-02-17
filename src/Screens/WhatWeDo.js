@@ -20,7 +20,7 @@ const WhatWeDo = () => {
 
             <Section
                 Title='Mobile Apps'        
-                Content={`Mobile Apps are our bread and butter. It's what we prefer to make and what we specialize in. From ideas to published apps, we do it all.`}
+                Content={`Mobile Apps are our bread and butter. It's what we prefer to make and what we specialize in. From ideas to published apps, we do it all. Take a look at some of the apps that are published right now!`}
                 Style='A'
                 Orientation='Right'
                 AppLogo1={NAWPutter}
