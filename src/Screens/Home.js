@@ -2,12 +2,18 @@ import React from 'react';
 
 import '../Styles.css'
 
+import Title from './Title';
+import Portfolio from './Portfolio';
+import Header from '../Components/Header';
+import HeaderLogo from '../Components/HeaderLogo';
+
 const Home = () => {
     return (
         <>
-            <div >
-                Home
-            </div>
+            <HeaderLogo />
+            <Header />
+            <Title />
+            <Portfolio />
         </>
     )
 }

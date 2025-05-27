@@ -2,6 +2,7 @@ import React from 'react';
 
 import Footer from '../Components/Footer';
 import Section from '../Components/Section';
+import HeaderLogo from '../Components/Header';
 
 import NAWPutter from '../Assets/Images/GameLogos/NAWPutterIcon.png'
 import Randominator from '../Assets/Images/GameLogos/Randominator_Icon.png'
@@ -19,7 +20,7 @@ const WhatWeDo = () => {
             </div>
 
             <Section
-                Title='Mobile Apps'        
+                Title='Mobile Apps'
                 Content={`Mobile Apps are our bread and butter. It's what we prefer to make and what we specialize in. From ideas to published apps, we do it all. Take a look at some of the apps that are published right now!`}
                 Style='A'
                 Orientation='Right'
@@ -35,12 +36,12 @@ const WhatWeDo = () => {
             />
 
             <Section
-                Title='Websites'        
+                Title='Websites'
                 Content={`Mobile is our bread and butter, but websites are the bread basket. What does that mean? We don't really know, but we can make websites too. Hell, we made this website you're using right now.`}
                 Style='B'
                 Orientation='Right'
                 AppLogo2={Whale}
-                AppLogoAlt2={`Randominator App Logo`}    
+                AppLogoAlt2={`Randominator App Logo`}
             />
 
             <Footer />

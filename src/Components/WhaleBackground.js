@@ -1,5 +1,5 @@
 import React from 'react';
-import Whale from '../Assets/Images/Logo/NAW_Productions.png'
+import Whale from '../Assets/Images/Logo/Whale.png'
 
 const WhaleBackground = ({DaHeight}) => {
 

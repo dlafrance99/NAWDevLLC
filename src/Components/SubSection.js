@@ -1,39 +1,13 @@
 import React from 'react';
 
-import WhaleBG from '../Assets/Images/Logo/NAW_Productions_10PercentOpacity.png'
-import WhaleFlipBG from '../Assets/Images/Logo/NAW_Productions_10PercentOpacity_Flip.png'
-
 const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientation, Destination }) => {
 
-
-
-    const RandomPosition = () => {
-        let RandomNum = Math.floor(Math.random() * 170)
-        return -120 + RandomNum
-    }
-
-    const RandomWhale = () => {
-        let Rando = Math.floor(Math.random()*2)
-        if(Rando === 1){
-            return WhaleBG
-        }else {
-            return WhaleFlipBG
-        }
-    }
-
-    const BackgroundStyle = {
-        backgroundImage: `url(${RandomWhale()})`,
-        backgroundSize: '150%',
-        backgroundRepeat: 'no-repeat',
-        backgroundPositionY: 'center',
-        backgroundPositionX: `${RandomPosition()}vw`,
-    }
 
     const showSubSection = () => {
         if (Logo === null) {
             return (
                 <>
-                    <div style={BackgroundStyle} className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
+                    <div className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
                         <div className='centerText Nav'>
                             {
                                 Orientation === 'Left'
@@ -76,7 +50,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
         } else {
             return (
                 <>
-                    <div style={BackgroundStyle} className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
+                    <div className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
                         <div className='centerText Nav'>
                             {
                                 Orientation === 'Left'

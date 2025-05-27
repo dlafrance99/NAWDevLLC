@@ -1,43 +1,18 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-import logo from './Assets/Images/Logo/Whale_NAWDEV_Right.png'
-import Whale from './Assets/Images/Logo/NAW_Productions_10PercentOpacity.png'
+import HeaderLogo from "./Components/Header";
 
 import './Styles.css';
 
 export default function App() {
-  const RandomShift = () => {
-    let number = Math.floor(Math.random() * 1000)
-
-    return (number)
-  }
-
-  const WrapperStyle = {
-    backgroundImage: `url(${Whale})`,
-    backgroundSize: '400vw',
-    backgroundPosition: `${RandomShift()}px`,
-  
-  }
 
   return (
-    <div className="Wrapper" style={WrapperStyle}>
-
+    <div className="Wrapper">
       <div className="Header">
+        <HeaderLogo />
         <nav
-          className="Nav"
+          className="HeaderNav"
         >
-          <NavLink
-            className={("HeaderLink")}
-            to="/"
-          >
-
-            <img
-              src={logo}
-              alt='logo'
-              className='HeaderLogoImage'
-            />
-          </NavLink>
-
           <NavLink
             className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
             to="/"

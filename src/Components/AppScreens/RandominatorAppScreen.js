@@ -3,8 +3,7 @@ import React from 'react';
 import Section from '../Section';
 
 import Randominator from '../../Assets/Images/GameLogos/Randominator_Icon.png';
-import Whale from '../../Assets/Images/Logo/NAW_Productions.png';
-import WhaleFlip from '../../Assets/Images/Logo/NAW_Productions_Flip.png';
+import Whale from '../../Assets/Images/Logo/Whale.png';
 
 
 const RandominatorAppScreen = () => {
@@ -31,7 +30,7 @@ const RandominatorAppScreen = () => {
             <Section
                 Title='Randominate'
                 Content={`This is kind of the whole point of the app. Once you've created your lists, simply select the list and randominate. The app will randomly select an item from your list after a little light show (epileptics beware).`}
-                AppLogo1={WhaleFlip}
+                AppLogo1={Whale}
                 AppLogoAlt1='Randominator Logo'                
             />
 

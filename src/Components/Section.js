@@ -1,39 +1,11 @@
 import React from 'react';
 
-import WhaleBG from '../Assets/Images/Logo/NAW_Productions_10PercentOpacity.png'
-import WhaleFlipBG from '../Assets/Images/Logo/NAW_Productions_10PercentOpacity_Flip.png'
-
 const Section = ({ AppLogo1, AppLogoAlt1, AppLogo2, AppLogoAlt2, AppLogo3, AppLogoAlt3, Title, Content, Style, Destination1, Destination2, Destination3 }) => {
-
-
-    const RandomPosition = () => {
-        let RandomNum = Math.floor(Math.random() * 170)
-        return -120 + RandomNum
-    }
-
-    const RandomWhale = () => {
-        let Rando = Math.floor(Math.random() * 2)
-        if (Rando === 1) {
-            return WhaleBG
-        } else {
-            return WhaleFlipBG
-        }
-    }
-
-    const BackgroundStyle = {
-        backgroundImage: `url(${RandomWhale()})`,
-        backgroundSize: '150%',
-        backgroundRepeat: 'no-repeat',
-        backgroundPositionY: 'center',
-        backgroundPositionX: `${RandomPosition()}vw`,
-    }
-
 
     const showSection = () => {
         return (
             <>
                 <div
-                    style={BackgroundStyle}
                     className={`${Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}`}>
                     <div className='centerText'>
                         <div className='BodyHeader' id='twentythree'>

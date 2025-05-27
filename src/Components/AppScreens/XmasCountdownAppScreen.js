@@ -3,7 +3,7 @@ import React from 'react';
 import Section from '../Section';
 
 import XmasCountdown from '../../Assets/Images/GameLogos/XmasCountdown_Icon.png';
-import Whale from '../../Assets/Images/Logo/NAW_Productions.png';
+import Whale from '../../Assets/Images/Logo/Whale.png';
 
 const XmasCountdownAppScreen = () => {
 

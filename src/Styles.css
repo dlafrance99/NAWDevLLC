@@ -2,7 +2,7 @@
   background-color: #222629;
   min-width: 100vw;
   min-height: 100vh;
-  
+
 }
 
 .Content {
@@ -17,6 +17,12 @@
   justify-content: space-around;
 }
 
+.HeaderNav {
+  flex-direction: row;
+  display: flex;
+  justify-content: right;
+}
+
 .Header {
   height: 99px;
   background-color: #650121;
@@ -24,8 +30,20 @@
 
 .HeaderLogoImage {
   object-fit: contain;
+  height: 75px;    
+  z-index: 100;
+  pointer-events: all !important;
+}
+
+.FooterLogoImage {
+  object-fit: contain;
   height: 75px;
-  padding: 10px 0px 0px 10px;
+}
+
+.MainImage {
+  object-fit: contain;
+  height: 50vh;
+  margin-top: 25vh;
 }
 
 .SocialIcon {
@@ -52,6 +70,7 @@
 
 .SocialContainer {
   min-height: 98px;
+  justify-content: center;
 }
 
 #twentythree {
@@ -92,6 +111,24 @@
   color: white;
 }
 
+.MenuTextStyle {
+  font-size: 2em;
+  color: white;
+  justify-self: center;
+  align-self: center;
+  font-family: Verdana;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.HeaderText {
+  font-size: 2em;
+  color: white;  
+  font-family: Verdana;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
 .HeaderLink {
   font-size: 2em;
   color: white;
@@ -100,14 +137,12 @@
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
-  padding: 0px 10px 0px 10px;
 }
 
 .Linked:hover {
   height: 99px;
   line-height: 99px;
   text-align: center;
-  padding: 0px 10px 0px 10px;
   justify-self: center;
   align-self: center;
   font-family: Verdana;
@@ -120,7 +155,6 @@
 .HeaderLinkActive {
   height: 99px;
   text-align: center;
-  padding: 0px 10px 0px 10px;
   font-size: 2em;
   justify-self: center;
   align-self: center;
@@ -202,6 +236,8 @@
   line-height: 98px;
   font-family: Verdana;
   font-weight: bolder;
+  justify-content: center;
+  display: flex;
 }
 
 .marginLeft {
@@ -211,6 +247,7 @@
 .marginRight {
   margin-right: 50px;
 }
+
 .marginTop {
   margin-top: 10px;
 }
