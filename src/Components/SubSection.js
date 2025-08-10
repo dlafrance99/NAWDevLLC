@@ -1,13 +1,13 @@
 import React from 'react';
 
-const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientation, Destination }) => {
+const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, Orientation, Destination }) => {
 
 
     const showSubSection = () => {
         if (Logo === null) {
             return (
                 <>
-                    <div className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
+                    <div className={Style}>
                         <div className='centerText Nav'>
                             {
                                 Orientation === 'Left'
@@ -50,7 +50,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
         } else {
             return (
                 <>
-                    <div className={Style === 'A' ? 'PortfolioSegmentA' : 'PortfolioSegmentB'}>
+                    <div className={Style}>
                         <div className='centerText Nav'>
                             {
                                 Orientation === 'Left'
@@ -64,9 +64,17 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
                                             />
                                         </a>
 
-                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
-                                            {Title}
-                                        </a>
+                                        <div style={{ flex: 3, justifySelf: 'center', alignContent: 'center', textAlign: 'center' }}>
+                                            <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
+                                                {Title}
+                                            </a>
+
+                                            {Release && (
+                                                <div className='BodySubHeader' style={{ textAlign: 'center' }}>
+                                                    {Release}
+                                                </div>
+                                            )}
+                                        </div>
 
                                         <div className='BodySubHeader'>
                                             {Content}
@@ -78,9 +86,17 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
                                             {Content}
                                         </div>
 
-                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
-                                            {Title}
-                                        </a>
+                                        <div style={{ flex: 3, justifySelf: 'center', alignContent: 'center', textAlign: 'center' }}>
+                                            <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
+                                                {Title}
+                                            </a>
+
+                                            {Release && (
+                                                <div className='BodySubHeader' style={{ textAlign: 'center' }}>
+                                                    {Release}
+                                                </div>
+                                            )}
+                                        </div>
 
                                         <a href={Destination} target="_blank" rel='noreferrer' className='BodySubHeader'>
                                             <img
@@ -93,7 +109,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Content, Content2, Style, Orientatio
                             }
 
                         </div>
-                    </div>
+                    </div >
                 </>
             )
         }

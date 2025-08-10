@@ -1,23 +1,26 @@
 import React from 'react';
 
 import SubSection from '../Components/SubSection';
+import HeaderLogo from '../Components/HeaderLogo';
+import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import ScreenTitle from '../Components/ScreenTitle';
 
 const About = () => {
     return (
         <>
-            <div className='PortfolioSegmentAShort'>
-                <div className='BodyMainHeader'>
-                    About NAW Development
-                </div>
-            </div>
+            <HeaderLogo />
+            <ScreenTitle
+                Title='About'
+            />
+            <Header />            
 
             <SubSection
                 Logo={null}
                 Title={`What's your history?`}
                 Content={`NAW Development LLC (NAW Dev) is a small web and mobile development company founded by Devon LaFrance during the pandemic in 2020.`}
                 Content2={`During the pandemic, Devon had a lot of time to spend doing his favorite hobby, Disc Golf. Determined to become a better putter, he decided to develop NAW Putter. Shortely after finishing the app, he won his first tournament by 9 strokes. Ever since Devon's spent his time improving NAW Putter and developing a couple other apps along the way.`}
-                Style='A'
+                Style='DGGStyle'
                 Orientation='Right'
             />
 

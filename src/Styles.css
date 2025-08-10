@@ -2,12 +2,18 @@
   background-color: #222629;
   min-width: 100vw;
   min-height: 100vh;
-
 }
 
 .Content {
   min-height: 85vh;
   background-color: #222629;
+  display: flex;
+}
+
+.MaroonWrapper {
+  background: linear-gradient(115deg, white, black);
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -25,12 +31,12 @@
 
 .Header {
   height: 99px;
-  background-color: #650121;
+  background: linear-gradient(295deg, white, black);
 }
 
 .HeaderLogoImage {
   object-fit: contain;
-  height: 75px;    
+  height: 75px;
   z-index: 100;
   pointer-events: all !important;
 }
@@ -79,6 +85,15 @@
   padding-bottom: 3vh;
 }
 
+.formContainer {
+  max-width: 50%;
+  background: linear-gradient(115deg, black, white);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin: auto;
+  margin-bottom: 1.25rem;
+}
+
 .AppLogo {
   object-fit: contain;
   max-height: 30vh;
@@ -111,6 +126,16 @@
   color: white;
 }
 
+.GenericTextStyle {
+  font-size: 1em;
+  color: white;
+  justify-self: center;
+  align-self: center;
+  font-family: Verdana;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
 .MenuTextStyle {
   font-size: 2em;
   color: white;
@@ -123,7 +148,7 @@
 
 .HeaderText {
   font-size: 2em;
-  color: white;  
+  color: white;
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
@@ -182,12 +207,10 @@
   text-align: center;
   font-size: 3em;
   color: white;
-  justify-self: center;
   align-self: center;
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
-  flex: 1;
   margin: 0 15px 0 15px
 }
 
@@ -203,16 +226,46 @@
   font-weight: bolder;
   text-decoration: none;
   padding: 0px 20px 0px 20px;
-  flex: 1;
+  flex: 2;
 }
 
 .centerText {
   min-height: 70vh;
 }
 
+.DGGStyle {
+  min-height: 70vh;
+  background: linear-gradient(225deg, #1C1F21, 70%, #00ADB5);
+}
+
+.GFGluttonStyle {
+  min-height: 70vh;
+  background: linear-gradient(295deg, #222A27, 70%, #AB8D3E);
+}
+
+.Oceans21Style {
+  min-height: 70vh;
+  background: linear-gradient(225deg, #122B2A, 70%, #1E4845);
+}
+
+.XmasStyle {
+  min-height: 70vh;
+  background: linear-gradient(225deg, #c60806, 70%, #039547);
+}
+
+.NAWPutterStyle {
+  min-height: 70vh;
+  background: linear-gradient(295deg, #440d15, 70%, #246191);
+}
+
+.RandominatorStyle {
+  min-height: 70vh;
+  background: linear-gradient(295deg, #dc473d, 70%, #be7afb);
+}
+
 .PortfolioSegmentA {
   min-height: 70vh;
-  background-color: #222629;
+  background: linear-gradient(45deg, #650121, #3d0114);
 }
 
 .PortfolioSegmentAShort {
@@ -222,7 +275,7 @@
 
 .PortfolioSegmentB {
   min-height: 70vh;
-  background-color: #101113;
+  background: linear-gradient(135deg, #650121, #3d0114);
 }
 
 .PortfolioSegmentBShort {
@@ -253,11 +306,10 @@
 }
 
 .ContactContent {
-  margin: auto;
-  border: 2px black solid;
-  padding: 10px 50px;
-  border-radius: 1rem;
-  background-color: black;
+  min-height: 85vh;
+  background: linear-gradient(115deg, white, black);
+  display: flex;
+  padding-top: 100px;
 }
 
 .EmailStyle {

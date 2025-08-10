@@ -1,11 +1,12 @@
 import React from 'react';
-
-
+import { useNavigate } from 'react-router-dom';
 
 import logo from '../Assets/Images/Logo/NAW_Dev_Logo_Normal.png'
 import { FaGithub, FaInstagram, FaPatreon } from 'react-icons/fa'
 
 const Footer = () => {
+    const Navigate = useNavigate()
+
     return (
         <>
             <div className='Header Nav'>
@@ -32,7 +33,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div style={{ flex: 1, justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
+                <div style={{ flex: 1, justifyContent: 'space-around', display: 'flex', alignItems: 'center' }}>
+                    <div className='CopyRight' onClick={() => Navigate('/Terms')} style={{ cursor: 'pointer' }}>
+                        Terms & Privacy
+                    </div>
                     <img
                         src={logo}
                         alt='NAW Development logo'

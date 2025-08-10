@@ -27,21 +27,24 @@ const Header = ({ navigation }) => {
 
     return (
         <>
-            <div style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer' }} onClick={() => setMenuOpen(!MenuOpen)} >
+            <div style={{ position: 'fixed', top: 30, right: 30, cursor: 'pointer' }} onClick={() => setMenuOpen(!MenuOpen)} >
                 <MenuIcon
                     fontSize={40}
                     color='white'
                 />
                 {
                     MenuOpen && (
-                        <div style={{ position: 'absolute', top: 50, right: 10, cursor: 'pointer', borderColor: 'red', borderWidth: 2, borderStyle: 'solid' }}>
-                            <div className='MenuTextStyle'>
-                                {`About`.toUpperCase()}
+                        <div style={{ position: 'absolute', top: 50, right: 10, cursor: 'pointer' }}>
+                            <div onClick={() => Navigate('/Home')} className='MenuTextStyle'>
+                                {`Home`.toUpperCase()}
                             </div>
-                            <div className='MenuTextStyle'>
+                            <div onClick={() => Navigate('/Portfolio')} className='MenuTextStyle'>
                                 {`Portfolio`.toUpperCase()}
                             </div>
-                            <div className='MenuTextStyle'>
+                            <div onClick={() => Navigate('/About')} className='MenuTextStyle'>
+                                {`About`.toUpperCase()}
+                            </div>
+                            <div onClick={() => Navigate('/Contact')} className='MenuTextStyle'>
                                 {`Contact`.toUpperCase()}
                             </div>
 

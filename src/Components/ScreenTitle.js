@@ -8,7 +8,7 @@ import { Sidenav, Nav } from 'rsuite';
 
 import '../Styles.css'
 
-const HeaderLogo = ({ navigation }) => {
+const ScreenTitle = ({ navigation, Title }) => {
     const Navigate = useNavigate()
     //State------------------------------------------------------
     const [MenuOpen, setMenuOpen] = useState(false)
@@ -27,16 +27,14 @@ const HeaderLogo = ({ navigation }) => {
 
     return (
         <>
-            <img
-                src={logo}
-                alt='NAW Development logo'
-                className='HeaderLogoImage'
-                style={{ position: 'fixed', top: 10, left: 10, cursor: 'pointer' }}
-                onClick={()=>Navigate('/Home')}
-            />
+            <div style={{ position: 'fixed', width: '100vw', top: 10, fontSize: '2em'}} onClick={() => setMenuOpen(!MenuOpen)} >
+                <div onClick={() => Navigate('/Home')} className='MenuTextStyle'>
+                    {Title.toUpperCase()}
+                </div>
+            </div>
         </>
     )
 }
 
 
-export default HeaderLogo;
+export default ScreenTitle;

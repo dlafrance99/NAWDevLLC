@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-import HeaderLogo from "./Components/Header";
+import HeaderLogo from "./Components/HeaderLogo";
 
 import './Styles.css';
 

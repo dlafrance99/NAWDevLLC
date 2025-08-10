@@ -3,17 +3,19 @@ import React from 'react';
 import '../Styles.css'
 
 import Title from './Title';
-import Portfolio from './Portfolio';
+import AppList from '../Components/AppList';
 import Header from '../Components/Header';
 import HeaderLogo from '../Components/HeaderLogo';
+import Footer from '../Components/Footer';
 
 const Home = () => {
     return (
         <>
-            <HeaderLogo />
+            <HeaderLogo />            
             <Header />
             <Title />
-            <Portfolio />
+            <AppList />
+            <Footer />
         </>
     )
 }
