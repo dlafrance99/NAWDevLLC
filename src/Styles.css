@@ -10,8 +10,159 @@
   display: flex;
 }
 
-.MaroonWrapper {
-  background: linear-gradient(115deg, white, black);
+.snap-container {
+  position: relative;
+  height: 100dvh;
+  padding-top: var(--header-h);
+  padding-bottom: var(--footer-h);
+  overflow-y: auto;
+
+  /* Snap settings */
+  scroll-snap-type: y mandatory;
+  /* keep hard snap */
+  scroll-behavior: auto;
+  /* INSTANT snap on release (was smooth) */
+  overscroll-behavior-y: contain;
+
+  /* OPTIONAL: make iOS stop coasting sooner (snappier) */
+  -webkit-overflow-scrolling: touch;
+  /* was 'touch'; reduces momentum */
+
+}
+
+/* Each full-screen “page” */
+.snap-section {
+  min-height: calc(100dvh - var(--header-h) - var(--footer-h));
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  /* ensures it fully stops on each page */
+  display: block;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .snap-container {
+    scroll-behavior: auto;
+  }
+}
+
+/* Only affects the Title section because we added 'title-fade' */
+.title-fade {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 220ms ease-out,
+    transform 260ms ease-out;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.title-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-fade.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition-duration: 160ms;
+  transition-timing-function: ease-in;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .title-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* Title-only fade (scope = section.title-scope) */
+.title-scope .HeaderText,
+.title-scope .MainImage {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 220ms ease-out, transform 260ms ease-out;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.title-scope.is-visible .HeaderText,
+.title-scope.is-visible .MainImage {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-scope.is-leaving .HeaderText,
+.title-scope.is-leaving .MainImage {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition-duration: 160ms;
+  transition-timing-function: ease-in;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .title-scope .HeaderText,
+  .title-scope .MainImage {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Title-only (already added earlier) */
+/* .title-scope .HeaderText, .title-scope .MainImage { ... } */
+
+/* SubSection-only fade: Title, Content, Content2, Release, and image */
+.sub-scope .BodyHeader,
+/* Title (link or div) */
+.sub-scope .BodySubHeader,
+/* Content, Content2, Release blocks */
+.sub-scope .AppLogo {
+  /* img */
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 220ms ease-out, transform 260ms ease-out;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.sub-scope.is-visible .BodyHeader,
+.sub-scope.is-visible .BodySubHeader,
+.sub-scope.is-visible .AppLogo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sub-scope.is-leaving .BodyHeader,
+.sub-scope.is-leaving .BodySubHeader,
+.sub-scope.is-leaving .AppLogo {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition-duration: 160ms;
+  transition-timing-function: ease-in;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .sub-scope .BodyHeader,
+  .sub-scope .BodySubHeader,
+  .sub-scope .AppLogo {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+.LogoWrapper {
+  background: linear-gradient(135deg, white, black);
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -87,7 +238,7 @@
 
 .formContainer {
   max-width: 50%;
-  background: linear-gradient(115deg, black, white);
+  background-color: #00000039;
   border-radius: 16px;
   padding: 1.25rem;
   margin: auto;
@@ -144,6 +295,10 @@
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
+}
+
+.MenuTextStyle:hover {
+  color: black
 }
 
 .HeaderText {
@@ -211,12 +366,14 @@
   font-family: Verdana;
   font-weight: bolder;
   text-decoration: none;
-  margin: 0 15px 0 15px
+  margin: 0 15px 0 15px;
+  flex: 1;
+
 }
 
 .BodySubHeader {
   text-align: center;
-  max-width: 60vw;
+  /* max-width: 60vw; */
   margin: auto;
   font-size: 1em;
   color: white;
@@ -226,41 +383,66 @@
   font-weight: bolder;
   text-decoration: none;
   padding: 0px 20px 0px 20px;
-  flex: 2;
+  flex: 1;
+
 }
 
 .centerText {
-  min-height: 70vh;
+  min-height: 100vh;
 }
 
 .DGGStyle {
-  min-height: 70vh;
+  min-height: 100vh;
   background: linear-gradient(225deg, #1C1F21, 70%, #00ADB5);
+}
+.DGGStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(315deg, #1C1F21, 70%, #00ADB5);
 }
 
 .GFGluttonStyle {
-  min-height: 70vh;
-  background: linear-gradient(295deg, #222A27, 70%, #AB8D3E);
+  min-height: 100vh;
+  background: linear-gradient(315deg, #222A27, 70%, #AB8D3E);
+}
+.GFGluttonStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(225deg, #222A27, 70%, #AB8D3E);
 }
 
-.Oceans21Style {
-  min-height: 70vh;
-  background: linear-gradient(225deg, #122B2A, 70%, #1E4845);
+.CardSharkCounterStyle {
+  min-height: 100vh;
+  background: linear-gradient(225deg, #002238, 70%, #1E4845);
 }
-
-.XmasStyle {
-  min-height: 70vh;
-  background: linear-gradient(225deg, #c60806, 70%, #039547);
+.CardSharkCounterStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(315deg, #002238, 70%, #1E4845);
 }
 
 .NAWPutterStyle {
-  min-height: 70vh;
-  background: linear-gradient(295deg, #440d15, 70%, #246191);
+  min-height: 100vh;
+  background: linear-gradient(315deg, #246191, 70%, #440d15);
+}
+.NAWPutterStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(225deg, #246191, 70%, #440d15);
+}
+
+.XmasStyle {
+  min-height: 100vh;
+  background: linear-gradient(225deg, #c60806, 70%, #039547);
+}
+.XmasStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(315deg, #c60806, 70%, #039547);
 }
 
 .RandominatorStyle {
-  min-height: 70vh;
-  background: linear-gradient(295deg, #dc473d, 70%, #be7afb);
+  min-height: 100vh;
+  background: linear-gradient(315deg, #dc473d, 70%, #be7afb);
+}
+.RandominatorStyle2 {
+  min-height: 100vh;
+  background: linear-gradient(225deg, #dc473d, 70%, #be7afb);
 }
 
 .PortfolioSegmentA {

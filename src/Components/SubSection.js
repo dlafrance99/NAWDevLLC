@@ -1,13 +1,13 @@
 import React from 'react';
 
-const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, Orientation, Destination }) => {
+const SubSection = ({ Logo, LogoAlt, Icon, Title, Release, Content, Content2, Style, Orientation, Destination }) => {
 
 
     const showSubSection = () => {
         if (Logo === null) {
             return (
                 <>
-                    <div className={Style}>
+                    <div className={Style} style={{ whiteSpace: 'pre-line' }}>
                         <div className='centerText Nav'>
                             {
                                 Orientation === 'Left'
@@ -21,9 +21,13 @@ const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, O
                                             <div >
                                                 {Content}
                                             </div>
-                                            <div className='marginTop'>
-                                                {Content2}
-                                            </div>
+                                            {
+                                                Content2 && (
+                                                    <div className='marginTop'>
+                                                        {Content2}
+                                                    </div>
+                                                )
+                                            }
                                         </div>
                                     </>
                                     :
@@ -32,9 +36,13 @@ const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, O
                                             <div >
                                                 {Content}
                                             </div>
-                                            <div className='marginTop'>
-                                                {Content2}
-                                            </div>
+                                            {
+                                                Content2 && (
+                                                    <div className='marginTop'>
+                                                        {Content2}
+                                                    </div>
+                                                )
+                                            }
                                         </div>
 
                                         <div className='BodyHeader'>
@@ -47,6 +55,63 @@ const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, O
                     </div>
                 </>
             )
+        } else if (Icon) {
+            return (
+                <>
+                    <div className={Style}>
+                        <div className='centerText Nav'>
+                            {
+                                Orientation === 'Left'
+                                    ?
+                                    <>
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} rel='noreferrer' className='BodySubHeader'>
+                                            {Icon}
+                                        </a>
+
+                                        <div style={{ flex: 3, justifySelf: 'center', alignContent: 'center', textAlign: 'center' }}>
+                                            <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
+                                                {Title}
+                                            </a>
+
+                                            {Release && (
+                                                <div className='BodySubHeader' style={{ textAlign: 'center' }}>
+                                                    {Release}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        <div className='BodySubHeader'>
+                                            {Content}
+                                        </div>
+                                    </>
+                                    :
+                                    <>
+                                        <div className='BodySubHeader'>
+                                            {Content}
+                                        </div>
+
+                                        <div style={{ flex: 3, justifySelf: 'center', alignContent: 'center', textAlign: 'center' }}>
+                                            <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} className='BodyHeader'>
+                                                {Title}
+                                            </a>
+
+                                            {Release && (
+                                                <div className='BodySubHeader' style={{ textAlign: 'center' }}>
+                                                    {Release}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} rel='noreferrer' className='BodySubHeader'>
+                                            {Icon}
+                                        </a>
+                                    </>
+                            }
+
+                        </div>
+                    </div >
+                </>
+            )
         } else {
             return (
                 <>
@@ -56,7 +121,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, O
                                 Orientation === 'Left'
                                     ?
                                     <>
-                                        <a href={Destination} target="_blank" rel='noreferrer' className='BodySubHeader'>
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} rel='noreferrer' className='BodySubHeader'>
                                             <img
                                                 src={Logo}
                                                 alt={LogoAlt}
@@ -98,7 +163,7 @@ const SubSection = ({ Logo, LogoAlt, Title, Release, Content, Content2, Style, O
                                             )}
                                         </div>
 
-                                        <a href={Destination} target="_blank" rel='noreferrer' className='BodySubHeader'>
+                                        <a href={`/AppScreen/${Title.replace(/\s/g, '')}`} rel='noreferrer' className='BodySubHeader'>
                                             <img
                                                 src={Logo}
                                                 alt={LogoAlt}

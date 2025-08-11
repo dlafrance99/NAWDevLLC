@@ -31,8 +31,8 @@ const HeaderLogo = ({ navigation }) => {
                 src={logo}
                 alt='NAW Development logo'
                 className='HeaderLogoImage'
-                style={{ position: 'fixed', top: 10, left: 10, cursor: 'pointer' }}
-                onClick={()=>Navigate('/Home')}
+                style={{ position: 'fixed', top: 10, left: 10, cursor: 'pointer', zIndex:1000 }}
+                onClick={() => Navigate('/Home')}
             />
         </>
     )

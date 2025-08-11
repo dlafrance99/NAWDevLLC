@@ -71,10 +71,10 @@ const Contact = () => {
 
     return (
         <>
-            <HeaderLogo />
             <ScreenTitle
                 Title='Contact'
             />
+            <HeaderLogo />
             <Header />
 
             <div className='ContactContent'>

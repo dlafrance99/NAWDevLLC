@@ -27,14 +27,14 @@ const Header = ({ navigation }) => {
 
     return (
         <>
-            <div style={{ position: 'fixed', top: 30, right: 30, cursor: 'pointer' }} onClick={() => setMenuOpen(!MenuOpen)} >
+            <div style={{ position: 'fixed', top: 30, right: 30, cursor: 'pointer', zIndex: 1000 }} onClick={() => setMenuOpen(!MenuOpen)} >
                 <MenuIcon
                     fontSize={40}
                     color='white'
                 />
                 {
                     MenuOpen && (
-                        <div style={{ position: 'absolute', top: 50, right: 10, cursor: 'pointer' }}>
+                        <div style={{ position: 'absolute', top: 50, right: 10, cursor: 'pointer', backgroundColor: '#0000004D', borderRadius: 15, padding: 10 }}>
                             <div onClick={() => Navigate('/Home')} className='MenuTextStyle'>
                                 {`Home`.toUpperCase()}
                             </div>
@@ -51,7 +51,7 @@ const Header = ({ navigation }) => {
                         </div>
                     )
                 }
-            </div>
+            </div >
         </>
     )
 }

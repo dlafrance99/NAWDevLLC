@@ -27,7 +27,7 @@ const ScreenTitle = ({ navigation, Title }) => {
 
     return (
         <>
-            <div style={{ position: 'fixed', width: '100vw', top: 10, fontSize: '2em'}} onClick={() => setMenuOpen(!MenuOpen)} >
+            <div style={{ position: 'fixed', width: '100vw', top: 10, fontSize: '2em', zIndex:1000}} onClick={() => setMenuOpen(!MenuOpen)} >
                 <div onClick={() => Navigate('/Home')} className='MenuTextStyle'>
                     {Title.toUpperCase()}
                 </div>

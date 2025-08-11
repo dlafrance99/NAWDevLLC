@@ -7,7 +7,7 @@ import logo from '../Assets/Images/Logo/NAW_Dev_Logo_Normal.png'
 const Title = () => {
     return (
         <>
-            <div className='MaroonWrapper'>
+            <div className='LogoWrapper'>
                 <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     <div className='HeaderText'>
                         {`Software Development`.toUpperCase()}
