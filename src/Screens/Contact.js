@@ -31,14 +31,11 @@ const Contact = () => {
         e.preventDefault();
         setErrorMsg("");
 
-        // Honeypot: if filled, silently ignore
-        if (formData.company) {
+        if (formData.company) { // honeypot
             setStatus("success");
             setFormData({ name: "", email: "", app: "", subject: "", message: "", company: "" });
             return;
         }
-
-        // Basic front-end validation
         if (!formData.name || !formData.email || !formData.subject || !formData.message) {
             setErrorMsg("Please fill out all required fields.");
             return;
@@ -46,20 +43,19 @@ const Contact = () => {
 
         setStatus("submitting");
         try {
-            // Replace this with your real API endpoint or email service
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: formData.name.trim(),
-                    email: formData.email.trim(),
-                    app: formData.app.trim(),
-                    subject: formData.subject.trim(),
-                    message: formData.message.trim()
-                })
-            });
+            const form = new FormData();
+            form.append("access_key", "1172beb9-0555-4e0f-9de3-19a2cb2b9348"); // ← required
+            form.append("name", formData.name.trim());
+            form.append("email", formData.email.trim());
+            form.append("subject", formData.subject.trim());
+            form.append("message", formData.message.trim() + (formData.app ? `\n\nApp: ${formData.app.trim()}` : ""));
+            // optional spam trap recognized by Web3Forms:
+            form.append("botcheck", formData.company || "");
 
-            if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+            const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: form });
+            const data = await res.json();
+
+            if (!data.success) throw new Error(data.message || "Failed");
 
             setStatus("success");
             setFormData({ name: "", email: "", app: "", subject: "", message: "", company: "" });
@@ -68,6 +64,7 @@ const Contact = () => {
             setErrorMsg("Something went wrong sending your message. Please try again or email me directly.");
         }
     };
+
 
     return (
         <>
@@ -83,7 +80,7 @@ const Contact = () => {
                     <header style={styles.header}>
                         <h1 className='MenuTextStyle' style={{ marginBottom: 0, marginTop: 0 }}>Get in touch</h1>
                         <p className='GenericTextStyle' style={{ marginBottom: 0, marginTop: 0 }}>
-                            Have a question, or suggestion, or comment? Hit me up, I usually respond within a couple days
+                            Have a question, or suggestion, or comment? Hit me up, I usually respond within a couple days.
                         </p>
                     </header>
 
@@ -222,7 +219,7 @@ const Contact = () => {
                             >
                                 {status === "submitting" ? "Sending…" : "Send message"}
                             </button>
-                            <a href="mailto:devon@nawdevelopment.com" style={styles.secondaryLink}>
+                            <a href="mailto:nawdevelopment@gmail.com" style={styles.secondaryLink}>
                                 or email me directly →
                             </a>
                         </div>
@@ -263,9 +260,27 @@ const styles = {
         borderRadius: 8,
         fontSize: ".95rem"
     },
-    alertSuccess: { background: "rgba(0,160,60,.15)", border: "1px solid rgba(0,160,60,.35)" },
-    alertError: { background: "rgba(200,0,0,.15)", border: "1px solid rgba(200,0,0,.35)" },
-    alertWarn: { background: "rgba(220,170,0,.15)", border: "1px solid rgba(220,170,0,.35)" },
+    alertSuccess: {
+        background: "rgba(0,160,60,.15)",
+        border: "1px solid rgba(0,160,60,.35)",
+        width: '80%',
+        margin: 'auto',
+        marginTop: '10px'
+    },
+    alertError: {
+        background: "#dc473d80",
+        border: "1px solid #dc473d",
+        width: '80%',
+        margin: 'auto',
+        marginTop: '10px'
+    },
+    alertWarn: {
+        background: "#dc473d80",
+        border: "1px solid #dc473d",
+        width: '80%',
+        margin: 'auto',
+        marginTop: '10px'
+    },
 
     honeypotLabel: { position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" },
     honeypotInput: { width: 1, height: 1, opacity: 0 },
@@ -322,10 +337,9 @@ const styles = {
         fontSize: "1rem",
         fontWeight: 600,
         cursor: "pointer",
-        background: "linear-gradient(225deg, #1C1F21, 70%, #00ADB5)",
-        color: "white",
-        boxShadow: "0 3px 10px #00ADB5",
-        textDecoration: "none",
+        backgroundColor: 'white',
+        // background: "linear-gradient(225deg, #1C1F21, 70%, #00ADB5)",
+        color: "black",
         fontFamily: 'Verdana',
         fontWeight: 'bolder',
     },
@@ -334,10 +348,11 @@ const styles = {
         textDecoration: "none",
         fontFamily: 'Verdana',
         fontWeight: 'bolder',
+        color: '#00ADB5'
     },
 
     footerNote: { fontSize: ".9rem", marginTop: "1rem", },
-    link: { textDecoration: "underline" },
+    link: { textDecoration: "underline", color: '#00ADB5' },
 
     // Responsive tweak
     "@media (min-width: 720px)": {}, // (Inline styles can't do queries; if you move to CSS/Tailwind, use a 2-col grid:)

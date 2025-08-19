@@ -82,7 +82,7 @@ const About = () => {
                         Title={`Our Mission?`}
                         Content={`I guess our mission is to make apps. We make apps that are interesting for us. So Disc Golf and other fun things. Most of our apps are available for free (likely with ads) and with paid options that improve the experience.`}
                         Content2={`What do we do with all that sweet money from our apps? Non of your business really. We'll let you into the secret though, it helps us do this full time. If we can do this full time, we'll spend more time improving our apps!`}
-                        Style='RandominatorStyle'
+                        Style='NAWPutterStyle'
                         Orientation='Left'
                     />
                 </section>
