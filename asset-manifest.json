@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/NAWDevLLC/static/css/main.66c758c2.css",
+    "main.js": "/NAWDevLLC/static/js/main.12801838.js",
+    "static/media/CardSharkCounterIcon.png": "/NAWDevLLC/static/media/CardSharkCounterIcon.1dee3b9ab3f2586e4e42.png",
+    "static/media/WhaleWithBasket.png": "/NAWDevLLC/static/media/WhaleWithBasket.c8d1058af2bc26728830.png",
+    "static/media/GFGluttonIcon.png": "/NAWDevLLC/static/media/GFGluttonIcon.d28581e5cfbd4203ed19.png",
+    "static/media/Putt100.png": "/NAWDevLLC/static/media/Putt100.5dbf1183b4c1b8e6d30a.png",
+    "static/media/RapidReaderIcon.png": "/NAWDevLLC/static/media/RapidReaderIcon.49205e4482b0e9e26065.png",
+    "static/media/DiscGolfGamesIcon.png": "/NAWDevLLC/static/media/DiscGolfGamesIcon.14e333fa0c04245c95fa.png",
+    "static/media/Tree.png": "/NAWDevLLC/static/media/Tree.9c2041d4e0ce8fd02b22.png",
+    "static/media/NAW_Dev_Logo_Normal.png": "/NAWDevLLC/static/media/NAW_Dev_Logo_Normal.69a3b02d7f49b2806ad5.png",
+    "static/media/NAW-head-Basic.png": "/NAWDevLLC/static/media/NAW-head-Basic.91d84bb81c9b224d4d21.png",
+    "static/media/SecretStuffIcon.png": "/NAWDevLLC/static/media/SecretStuffIcon.f2926c473ca0538d1e43.png",
+    "static/media/DGGIcon.png": "/NAWDevLLC/static/media/DGGIcon.0c159ef0f733db9dac80.png",
+    "static/media/Rudolph.png": "/NAWDevLLC/static/media/Rudolph.f5df65bff6817e5444ba.png",
+    "static/media/D_sc.png": "/NAWDevLLC/static/media/D_sc.fb467f00514afd165f17.png",
+    "static/media/FieldWorkIcon.png": "/NAWDevLLC/static/media/FieldWorkIcon.00d4b8f65397b397facd.png",
+    "static/media/Chaos.png": "/NAWDevLLC/static/media/Chaos.21bf9ecfc6bf32528b4f.png",
+    "static/media/AndOne.png": "/NAWDevLLC/static/media/AndOne.07ba5774566e59aec43c.png",
+    "static/media/HitItOrSplitIt.png": "/NAWDevLLC/static/media/HitItOrSplitIt.7b385fc1b8f6a18c1c67.png",
+    "static/media/QuickCount.png": "/NAWDevLLC/static/media/QuickCount.a292b5b54ff77c94a37a.png",
+    "static/media/7_10.png": "/NAWDevLLC/static/media/7_10.bcdf734cbb380afb85a1.png",
+    "static/media/Hour_Challenge.png": "/NAWDevLLC/static/media/Hour_Challenge.15e12a04e1eabc44c579.png",
+    "static/media/AroundTheWorld.png": "/NAWDevLLC/static/media/AroundTheWorld.41fd2ce8e3739e869951.png",
+    "static/media/Randominator_Icon.png": "/NAWDevLLC/static/media/Randominator_Icon.731f1aacba9f72be2da4.png",
+    "static/media/XmasCountdown_Icon.png": "/NAWDevLLC/static/media/XmasCountdown_Icon.e5389128f3af0fa8f0c3.png",
+    "static/media/NAWPutterIcon.png": "/NAWDevLLC/static/media/NAWPutterIcon.8e8c9d7874fddc96ec03.png",
+    "static/media/FoundationFantasyIcon.png": "/NAWDevLLC/static/media/FoundationFantasyIcon.4e543e7caf529b37ef63.png",
+    "static/media/Pure.png": "/NAWDevLLC/static/media/Pure.b74a1f5f72fe80f3d3d8.png",
+    "static/media/BlueBasket.png": "/NAWDevLLC/static/media/BlueBasket.1bca2ceb6b8612503c6e.png",
+    "index.html": "/NAWDevLLC/index.html",
+    "main.66c758c2.css.map": "/NAWDevLLC/static/css/main.66c758c2.css.map",
+    "main.12801838.js.map": "/NAWDevLLC/static/js/main.12801838.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66c758c2.css",
+    "static/js/main.12801838.js"
+  ]
+}
