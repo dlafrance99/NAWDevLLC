@@ -1,58 +1,43 @@
-import { Outlet, NavLink } from "react-router-dom";
-
-import HeaderLogo from "./Components/HeaderLogo";
-
-import './Styles.css';
-
-export default function App() {
-
-  return (
-    <div className="Wrapper">
-      <div className="Header">
-        <HeaderLogo />
-        <nav
-          className="HeaderNav"
-        >
-          <NavLink
-            className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/"
-          >
-            <div className="Linked">
-              WhatWeDo
-            </div>
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/Portfolio"
-          >
-            <div className="Linked">
-              Portfolio
-            </div>
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/About"
-          >
-            <div className="Linked">
-              About
-            </div>
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) => isActive ? "HeaderLinkActive" : "HeaderLink"}
-            to="/Contact"
-          >
-            <div className="Linked">
-              Contact
-            </div>
-          </NavLink>
+// App.js
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 
-        </nav>
-        <Outlet />
-      </div>
-    </div>
-  );
+import Home from "./Screens/Home";
+import About from "./Screens/About";
+import Contact from "./Screens/Contact";
+import Portfolio from "./Screens/Portfolio";
+import AppScreen from "./Screens/AppScreen";
+
+function App() {
+    return (
+        <HashRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/appscreen/:AppTitle" element={<AppScreen />} />
+                <Route
+                    path="*"
+                    element={
+                        <main
+                            style={{
+                                padding: "1rem",
+                                minHeight: "75vh",
+                                backgroundColor: "#111",
+                                color: "white",
+                            }}
+                        >
+                            There's nothing here, check the URL and try again...
+                        </main>
+                    }
+                />
+            </Routes>
+        </HashRouter>
+
+    );
 }
+
+export default App;
