@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NAWDevLLC/static/css/main.66c758c2.css",
-    "main.js": "/NAWDevLLC/static/js/main.12801838.js",
+    "main.js": "/NAWDevLLC/static/js/main.ff536fb1.js",
     "static/media/CardSharkCounterIcon.png": "/NAWDevLLC/static/media/CardSharkCounterIcon.1dee3b9ab3f2586e4e42.png",
     "static/media/WhaleWithBasket.png": "/NAWDevLLC/static/media/WhaleWithBasket.c8d1058af2bc26728830.png",
     "static/media/GFGluttonIcon.png": "/NAWDevLLC/static/media/GFGluttonIcon.d28581e5cfbd4203ed19.png",
@@ -31,10 +31,10 @@
     "static/media/BlueBasket.png": "/NAWDevLLC/static/media/BlueBasket.1bca2ceb6b8612503c6e.png",
     "index.html": "/NAWDevLLC/index.html",
     "main.66c758c2.css.map": "/NAWDevLLC/static/css/main.66c758c2.css.map",
-    "main.12801838.js.map": "/NAWDevLLC/static/js/main.12801838.js.map"
+    "main.ff536fb1.js.map": "/NAWDevLLC/static/js/main.ff536fb1.js.map"
   },
   "entrypoints": [
     "static/css/main.66c758c2.css",
-    "static/js/main.12801838.js"
+    "static/js/main.ff536fb1.js"
   ]
 }
